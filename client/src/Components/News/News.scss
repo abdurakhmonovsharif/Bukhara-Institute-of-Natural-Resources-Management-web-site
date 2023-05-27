@@ -1,0 +1,398 @@
+.allnews {
+  background: #021c52;
+  max-width: 1700px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+
+  .control-arrow,
+  .control-dots,
+  .carousel-status {
+    display: none;
+  }
+
+  .news {
+    padding: 0 3%;
+    margin: 0 auto;
+    width: 100%;
+    background: #021c52;
+
+    .news_title {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+
+      h1 {
+        font-size: 34px;
+        line-height: 41px;
+        color: #fff;
+      }
+
+      span {
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 24px;
+        color: #fff;
+        transition: 0.3s;
+        text-decoration: none;
+        cursor: pointer;
+      }
+    }
+
+    .news_row {
+      margin-top: 40px;
+      display: flex;
+      gap: 24px;
+      width: 100%;
+      align-items: center;
+
+      .left-carousel {
+        width: 46%;
+        min-width: 46%;
+        position: relative;
+        display: flex;
+        height: 100%;
+        align-items: center;
+
+        .carousel-root {
+          height: 405px;
+          border-radius: 6px;
+        }
+
+        .card-col {
+          width: 100%;
+          position: relative;
+          cursor: pointer;
+          height: 402px;
+          border-radius: 6px;
+
+          &:after {
+            content: "";
+            width: 100%;
+            height: 100%;
+            inset: 0;
+            position: absolute;
+            background: linear-gradient(180deg,
+                rgba(0, 42, 108, 0.2) 60.06%,
+                #002a6c 124.94%);
+            z-index: 1;
+          }
+
+          .textes {
+            position: absolute;
+            z-index: 11;
+            color: #fff;
+            text-align: start;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: end;
+            padding: 35px;
+            gap: 10px;
+
+            .date-views {
+              display: flex;
+              gap: 10px;
+              font-size: 14px;
+              align-items: center;
+            }
+
+            &:hover {
+              h6 {
+                color: #0dcaf0;
+                transition: all 0.7s;
+              }
+            }
+
+            h6 {
+              font-size: 17px;
+              font-weight: 500;
+              line-height: 1.25rem;
+              font-size: 18px;
+              display: -webkit-box;
+              -webkit-box-orient: vertical;
+              color: #fff;
+              -webkit-line-clamp: 2;
+              font-weight: 500;
+              letter-spacing: 0.5px;
+              overflow: hidden;
+              text-overflow: ellipsis;
+            }
+
+            span {
+              text-align: start;
+              font-weight: 500 !important;
+              font-size: 16px;
+            }
+          }
+
+          .image-container {
+            width: 100%;
+            height: 100%;
+
+            img {
+              width: 100%;
+              height: 100%;
+              object-position: center;
+              object-fit: cover;
+            }
+          }
+        }
+
+        .controller {
+          top: 40%;
+          display: flex;
+          flex-direction: column;
+          right: -12.5px;
+          position: absolute;
+          gap: 5px;
+          z-index: 1;
+
+          button {
+            border: none;
+            color: #fff;
+            background: #3b62b6;
+            padding: 4px;
+            margin-top: 1px;
+            cursor: pointer;
+            z-index: 111111 !important;
+            border-radius: 4px;
+
+            svg {
+              color: #ffff;
+            }
+          }
+        }
+      }
+
+      .carousel-root {
+        width: 100%;
+      }
+
+      .right-cards {
+        width: 60%;
+        height: 100%;
+
+        .cards {
+          display: grid;
+          grid-template-rows: repeat(2, 1fr);
+          grid-template-columns: repeat(2, 1fr);
+          row-gap: 10px;
+          column-gap: 15px;
+          width: 100%;
+        }
+
+        .card-col {
+          width: 100%;
+          position: relative;
+          cursor: pointer;
+          display: flex;
+          align-items: end;
+          height: 100%;
+          border-radius: 6px;
+          height: 230px;
+
+
+          .date-views {
+            display: flex;
+            gap: 10px;
+            font-size: 14px;
+            align-items: center;
+          }
+
+          &:after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            right: -1px;
+            background: linear-gradient(180deg,
+                rgba(0, 42, 108, 0.2) 60.06%,
+                #002a6c 114.94%);
+            z-index: 1;
+          }
+
+          .textes {
+            position: absolute;
+            z-index: 11;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+            gap: 10px;
+
+            &:hover {
+              h6 {
+                color: #0dcaf0;
+                transition: all 0.7s;
+              }
+            }
+
+            h6 {
+              font-size: 18px;
+              display: -webkit-box;
+              -webkit-box-orient: vertical;
+              color: #fff;
+              -webkit-line-clamp: 1;
+              font-weight: 500;
+              letter-spacing: 0.5px;
+              overflow: hidden;
+              text-overflow: ellipsis;
+            }
+
+            span {
+              text-align: start;
+              font-weight: 400;
+              font-size: 14px;
+            }
+          }
+
+          .image-container {
+            width: 100%;
+            height: 230px;
+
+            img {
+              width: 100%;
+              height: 100%;
+              object-position: center;
+              object-fit: cover;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// Mobile devices (portrait)
+@media only screen and (min-width: 200px) and (max-width: 480px) {
+  .allnews {
+    width: 100%;
+
+    .news_title {
+      display: flex;
+
+      h1 {
+        color: #fff;
+
+        margin-top: 5px;
+      }
+
+      a {
+        font-weight: 500;
+        font-size: 15px !important;
+        color: #fff;
+        transition: 0.3s;
+        text-decoration: none;
+      }
+    }
+
+    .news_row {
+      flex-direction: column;
+      width: 100%;
+      padding: 3px;
+
+      .left-carousel {
+        width: 100% !important;
+      }
+
+      .right-cards {
+        width: 100% !important;
+
+        .cards {
+          width: 100% !important;
+          display: grid !important;
+          grid-template-rows: 1fr !important;
+          grid-template-columns: 1fr !important;
+          row-gap: 10px;
+          column-gap: 0px;
+
+          .card-col {
+            width: 100% !important;
+          }
+        }
+      }
+    }
+  }
+}
+
+// iPads, tablets (portrait)
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+  .allnews {
+    .news_title {
+      display: flex;
+      align-items: center;
+
+      h1 {
+        font-size: 24px !important;
+        line-height: 41px;
+        color: #fff;
+        margin-top: 5px;
+      }
+
+      a {
+        font-weight: 500;
+        font-size: 10px;
+        color: #fff;
+        transition: 0.3s;
+        text-decoration: none;
+      }
+    }
+
+    .news_row {
+      flex-direction: column;
+      width: 100%;
+
+      .left-carousel {
+        width: 100% !important;
+      }
+
+      .right-cards {
+        width: 100% !important;
+      }
+    }
+  }
+}
+
+// Small screens, laptops (landscape)
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  .allnews {
+    .news_title {
+      display: flex;
+      align-items: center;
+
+      h1 {
+        font-size: 24px !important;
+        line-height: 41px;
+        color: #fff;
+        margin-top: 5px;
+      }
+
+      a {
+        font-weight: 500;
+        font-size: 10px;
+        color: #fff;
+        transition: 0.3s;
+        text-decoration: none;
+      }
+    }
+
+    .news_row {
+      flex-direction: column;
+      width: 100%;
+
+      .left-carousel {
+        width: 100% !important;
+      }
+
+      .right-cards {
+        width: 100% !important;
+      }
+    }
+  }
+}
+
+// Desktops, large screens (landscape)
+@media only screen and (min-width: 1025px) and (max-width: 1200px) {}
