@@ -1,0 +1,134 @@
+.allkadrs {
+  margin: 0 auto;
+  width: 100%;
+
+  .Kadr {
+    background: #021C52;
+    gap: 30px;
+    display: flex;
+    padding: 0 3%;
+    flex-direction: column;
+    justify-content: center;
+
+    .Kadr_title {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 40px;
+
+      h1 {
+        font-size: 34px;
+        line-height: 41px;
+        color: #fff;
+      }
+
+      span {
+        font-size: 20px;
+        cursor: pointer;
+        color: #fff;
+        transition: 0.3s;
+        text-decoration: none;
+      }
+    }
+
+    .Kadr_row_col {
+      width: 90%;
+      margin-right: 20px;
+      border: 1px solid hsla(0, 0%, 100%, 0.1);
+      padding: 6px 16px;
+      border-radius: 4px;
+      background: linear-gradient(158.71deg,
+          hsla(0, 0%, 100%, 0.24) -100%,
+          hsla(0, 0%, 100%, 0));
+      -webkit-backdrop-filter: blur(12px);
+      backdrop-filter: blur(12px);
+      color: #fff;
+      transition: 0.3s;
+
+      .Kadr_row_col_img {
+        min-width: 100% !important;
+        height: 250px;
+        margin-right: 16px;
+        border-radius: 5px;
+
+        img {
+          border-radius: 5px;
+          width: 100% !important;
+          height: 100% !important;
+          object-fit: cover;
+          object-position: center;
+          vertical-align: middle;
+        }
+      }
+
+      .Kadr_row_col_text {
+        h2 {
+          font-weight: 600;
+          font-size: 20px;
+          line-height: 22px;
+          color: #fff;
+          margin-top: 16px;
+          margin-bottom: 8px;
+          -webkit-line-clamp: 2;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          display: -webkit-box;
+          -webkit-box-orient: vertical;
+          font-family: Inter, sans-serif;
+        }
+
+        p {
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 24px;
+          letter-spacing: 0.5px;
+          color: #97a7bf;
+          margin-bottom: 18px;
+          margin-top: 0;
+          -webkit-line-clamp: 3;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          display: -webkit-box;
+          -webkit-box-orient: vertical;
+          font-family: Inter, sans-serif;
+        }
+      }
+    }
+  }
+
+  .react-multi-carousel-track {
+    display: flex;
+    justify-content: center;
+    padding: 5px 20px;
+  }
+}
+
+// Mobile devices (portrait)
+@media only screen and (min-width: 200px) and (max-width: 480px) {
+  .allkadrs {
+    .Kadr_title {
+      display: flex;
+      flex-direction: column;
+
+      h1 {
+        font-size: 20px !important;
+      }
+
+      a {
+        font-size: 15px !important;
+        color: #fff;
+        transition: 0.3s;
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+// iPads, tablets (portrait)
+@media only screen and (min-width: 481px) and (max-width: 768px) {}
+
+// Small screens, laptops (landscape)
+@media only screen and (min-width: 769px) and (max-width: 1024px) {}
+
+// Desktops, large screens (landscape)
+@media only screen and (min-width: 1025px) and (max-width: 1200px) {}
