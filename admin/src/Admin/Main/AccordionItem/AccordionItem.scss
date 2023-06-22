@@ -1,0 +1,17 @@
+.more-btn {
+  &:hover {
+    color: #3366f0;
+  }
+}
+
+button {
+  color: #000;
+  background: #fff;
+  border-radius: 7px;
+  padding: 8px;
+  width: max-content;
+  margin-right: 10px;
+  z-index: 1;
+  border: 0;
+  cursor: pointer;
+}
